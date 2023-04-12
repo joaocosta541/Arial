@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<script>
+function mostrarHorario() {
+  var data = new Date();
+  var hora = data.getHours();
+  var minuto = data.getMinutes();
+  var segundo = data.getSeconds();
+  hora = (hora < 10 ? "0" : "") + hora;
+  minuto = (minuto < 10 ? "0" : "") + minuto;
+  segundo = (segundo < 10 ? "0" : "") + segundo;
+  var horario = hora + ":" + minuto + ":" + segundo;
+  document.getElementById("horario").innerHTML = horario;
+}
+setInterval(mostrarHorario, 1000);
+</script>
+
+<div id="horario"></div>
